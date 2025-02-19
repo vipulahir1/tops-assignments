@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the profile card on the page */
+body {
+    margin-top: 30vh;
+    margin-left: 40vw;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #643b3b;
+}
+
+/* Style the profile card container */
+.profile-card {
+    background-color: #bbbca0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+/* Style the profile picture */
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid lightblue;
+}
+
+/* Style the user’s name */
+.profile-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Style the user’s bio */
+.profile-bio {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Style the follow button */
+.follow-btn {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+/* Add hover effect to the follow button */
+.follow-btn:hover {
+    background-color: blue;
+    height: 45px;
+    width: 100px;
+}
