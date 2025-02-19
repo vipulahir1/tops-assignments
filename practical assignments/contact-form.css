@@ -1,0 +1,44 @@
+*{
+    font-family: "popins",sans-serif;
+}
+#contact-form {
+    background-color: #858e46;
+    padding: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Add padding and margins to form fields */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-details {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style the submit button */
+#submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Add hover effect to the submit button */
+#submit-btn:hover {
+    background-color: #0056b3;
+    height: 50px;
+    width: 100px; 
+}

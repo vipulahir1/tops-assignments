@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up the container to use Flexbox */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+}
+
+/* Style the header */
+.header {
+    display: flex;
+    background-color: #ac2baf;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+#first-h1{
+    margin-left: 600px;
+}
+.this-h1{
+    margin-right: 100px;
+}
+
+/* Style the main content area */
+.main-content {
+    display: flex;
+    flex: 1; /* Allow the main content to take up remaining space */
+}
+
+/* Style the sidebar */
+.sidebar {
+    background-color: #f4f4f4;
+    width: 300px;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar h2 {
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+/* Style the main content */
+.content {
+    flex: 1; /* Allow the content to take up remaining space */
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.content h2 {
+    margin-bottom: 10px;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}

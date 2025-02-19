@@ -1,0 +1,176 @@
+
+
+================= CSS SELECTORS & STYLING ====================
+
+
+QUESTION 1  : What is a CSS selector? Provide examples of element, class, and ID selectors
+ANSWER -->   A css selector is a pattern used to select and style HTML elements. It defines which elements a set of CSS rules will apply to.
+
+        EXAMPLES : element selector
+                   class selector
+                   id selector
+                   universal selector
+                   grouping selector
+                   Child Selector
+                   last child 
+                   nth child 
+                   only child
+                   attributes start with
+                   attributes end with
+
+
+
+
+QUESTION 2 : Explain the concept of CSS specificity. How do conflicts between multiple stylesget resolved?
+ANSWER --> css specificity is a set of rules that determine which styles are applied when multiple rules target the same element. When there are conflicting styles, the browser uses specificity values to decide which rule takes precedence
+
+    PRIORITY :  first prriority is 
+                    !importnat
+                second is 
+                    inline css
+                third is 
+                    ID selectors (#id)
+                fourth is is 
+                    Classes (.class), Attributes ([attr]), Pseudo-classes (:hover, :nth-child)
+                fifth is priority is elements
+                    Elements (div, p, h1), Pseudo-elements (::before, ::after)
+
+
+               
+               
+QUESTION 3 : What is the difference between internal, external, and inline CSS? Discusstheadvantages and disadvantages of each approach.
+
+ANSWER -->
+        INLINE css --> Inline CSS applies styles directly within an HTML element using the style attribute.
+            Advantages :
+                        High specificity : Overrides external/internal styles.
+                        Quick and easy : Useful for single-use styles or testing.
+                        No need for additional files : Everything is in one place.
+
+            Disadvantages :
+                            Not reusable : Cannot be applied to multiple elements.
+                            Difficult to maintain  Clutters HTML and makes code harder to read.
+                            Performance issues  Increases page size and slows down rendering.
+
+        INTERNAL css --> Internal CSS is written inside a <style> tag within the <head> section of the HTML document.
+            Advantages:
+                        Better organization : Keeps styles separate from content.
+                        Scoped styles : Only applies to the current HTML document.
+                        No extra HTTP request : Faster loading compared to external CSS.
+
+            Disadvantages:
+                        Not reusable : Styles cannot be shared across multiple pages.
+                        Hard to manage in large projects : Becomes messy when styles increase.
+
+
+        EXTERNAL css --> External CSS is written in a separate .css file and linked to the HTML document using a <link> tag.
+        Advantages :
+                    Reusability : The same CSS file can style multiple pages.
+                    Better maintainability : Keeps HTML and CSS separate, making code cleaner.
+                    Faster loading times : CSS files are cached by browsers, improving performance.
+
+        Disadvantages:
+                        Requires an additional request : The browser must load an external file.
+                        Not ideal for small projects : Setting up a separate file may be unnecessary.
+               
+
+                        
+
+================= CSS Box Model ====================
+
+
+QUESTION 1: Explain the CSS box model and its components (content, padding,border,margin). How does each affect the size of an element?
+
+ANSWER --> The CSS Box Model is the fundamental structure that defines how elements are displayed on a webpage. Every HTML element is represented as a rectangular box.
+
+            components are given below : 
+                                        Content --> The actual content inside the element (e.g., text, images, etc.).
+                                        Padding --> Space between the content and the border.
+                                        Border --> A boundary that surrounds the padding and content.
+                                        Margin --> The space between the element and surrounding elements.  
+                            
+            By default, the total width and height of an element is calculated as given below:
+                Total Width  = Content Width  + Padding Left  + Padding Right  + Border Left  + Border Right
+                Total Height = Content Height + Padding Top   + Padding Bottom + Border Top   + Border Bottom
+
+
+
+
+QUESTION 2: What is the difference between border-boxand content-boxbox-sizing inCSS? Which is the default?
+
+ANSWER --> 1. content-box:
+                        Default value in CSS.
+                        Padding and border are added to the specified width and height.
+
+              border-box:
+                        Includes padding and border within the specified width and height.
+                        Keeps the element size fixed, preventing unexpected layout shifts.
+
+            BY DEFAULT VALUE OF BOX IS CONTENT-BOX.
+
+
+
+
+
+
+================= CSS Flexbox ====================
+
+
+
+
+QUESTION 1: : What is CSS Flexbox, and how is it useful for layout design? Explain the terms flex-container and flex-item.
+
+ANSWER --> CSS Flexbox is a layout model in CSS that allows for efficient alignment, distribution, and positioning of elements within         a container. It is particularly useful for creating responsive web designs without relying on complex float-based layouts or positioning.
+
+            use of flex box is given below:
+            1. Responsive Design --> Automatically adjusts elements based on screen size.
+            2. Flexible Item Sizing --> Items can grow, shrink, or maintain their proportions dynamically.
+            3. Easy Alignment --> Provides control over both horizontal and vertical alignment.
+            4. Reordering Elements --> Items can be visually reordered without changing the HTML structure.
+            5. Space Distribution --> Helps manage spacing efficiently between elements.
+
+    flex-container -->  A flex container is the parent element that holds and manages flex items. It is created by applying display: flex; or display: inline-flex; to an element.
+
+    flex-item --> A flex item is any direct child element inside a flex container. These items adjust their size and position based on the container's properties.
+
+
+
+
+
+QUESTION 2:  Describe the properties justify-content, align-items, and flex- direction used in Flexbox. 
+
+ANSWER -->  justify-content :
+                Controls the horizontal alignment of flex items along the main axis (which is determined by flex-direction).
+
+                Values:
+                    flex-start (default) --> Items align at the start of the main axis.
+                    flex-end --> Items align at the end of the main axis.
+                    center --> Items are centered along the main axis.
+                    space-between --> Items are evenly spread, with space between them.
+                    space-around --> Items have equal space around them.
+                    space-evenly --> Items have equal space between, before, and after them.
+
+            align-items:
+                Controls the vertical alignment of flex items along the cross axis (perpendicular to the main axis).
+
+                    Values:
+                        flex-start → Items align at the start of the cross axis.
+                        flex-end → Items align at the end of the cross axis.
+                        center → Items are centered along the cross axis.
+                        stretch (default) → Items stretch to fill the container height.
+                        baseline → Items align based on their text baseline.
+
+            flex-direction
+                Defines the direction in which flex items are placed in the container.
+
+                    Values:
+                        row (default) → Items are placed left to right.
+                        row-reverse → Items are placed right to left.
+                        column → Items are placed top to bottom.
+                        column-reverse → Items are placed bottom to top.
+                        
+                        
+                        
+                        
+                        
+================= Typography and Web Fonts ====================
