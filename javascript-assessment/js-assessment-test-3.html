@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+    body {
+      background-color: #0d1b2a;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 200px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      padding: 10px;
+      background-color: orange;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      background-color: #f0f0f0;
+      color: black;
+      margin: 5px auto;
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>My Todo List</h2>
+
+  <!-- Input box and button -->
+  <input type="text" id="todoInput" placeholder="add new">
+  <button id="addButton">Add</button>
+
+  <!-- List area -->
+  <ul id="todoList"></ul>
+
+  <script>
+    // This function will save data into cookies
+    function saveToCookies(todos) {
+      document.cookie = "myTodos=" + JSON.stringify(todos) + "; path=/";
+    }
+
+    // This function will read data from cookies
+    function getFromCookies() {
+      let name = "myTodos=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let parts = decodedCookie.split(";");
+      for (let i = 0; i < parts.length; i++) {
+        let c = parts[i].trim();
+        if (c.indexOf(name) == 0) {
+          return JSON.parse(c.substring(name.length));
+        }
+      }
+      return [];
+    }
+
+    // This function adds an item to the list on screen
+    function addItemToList(text) {
+      let li = document.createElement("li");
+      li.textContent = text;
+      document.getElementById("todoList").appendChild(li);
+    }
+
+    // When the page loads, get the list from cookies
+    let todos = getFromCookies();
+    for (let i = 0; i < todos.length; i++) {
+      addItemToList(todos[i]);
+    }
+
+    // When the Add button is clicked
+    document.getElementById("addButton").addEventListener("click", function() {
+      let input = document.getElementById("todoInput");
+      let newTodo = input.value;
+
+      if (newTodo !== "") {
+        todos.push(newTodo);           
+        saveToCookies(todos);             
+        addItemToList(newTodo);          
+        input.value = "";                 
+      }
+    });
+  </script>
+</body>
+</html>
