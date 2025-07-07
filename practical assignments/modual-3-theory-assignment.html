@@ -1,5 +1,4 @@
 
-
 ================= CSS SELECTORS & STYLING ====================
 
 
@@ -168,9 +167,147 @@ ANSWER -->  justify-content :
                         row-reverse → Items are placed right to left.
                         column → Items are placed top to bottom.
                         column-reverse → Items are placed bottom to top.
+
+
+=========================css grid========================
+
+Question 1: CSS Grid vs Flexbox
+    CSS Grid:
+        A 2-dimensional layout system.
+
+        Can control both rows and columns at the same time.
+
+        Best for creating entire page layouts or grid-based designs.
+
+    Flexbox:
+        A 1-dimensional layout system.
+
+        Controls layout in a single direction: either row or column.
+
+        Best for small UI components like navbars, buttons, cards.
+
+
+
+Question 2: Describe the grid-template-columns, grid-template-rows, and grid-gapproperties.
+Provide examples of how to use them.
+
+    grid-template-columns:
+            .container {
+                display: grid;
+                grid-template-columns: 100px 1fr 2fr;
+            }
+    
+    grid-template-rows:
+            .container {
+                display: grid;
+                grid-template-rows: 50px 200px auto;
+            }
+
+    grid-gap (or gap):
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+            }
+
+
+
+=====================media query=======================
+
+Question 1: What are media queries in CSS, and why are they important for responsive design?
+         Media Queries:
+            Media queries are CSS rules that apply styles based on the device’s screen size, resolution, or other features.
+
+            They help in making web pages responsive, meaning they adapt to different screen sizes (mobile, tablet, desktop).
+
+        Importance:
+            Make websites mobile-friendly.
+
+            Improve readability and usability across devices.
+
+            Allow different layouts/styles for different screens.
+
+
+Question 2: Basic Media Query for screens smaller than 600px
+
+            @media (max-width: 600px) {
+                body {
+                    font-size: 14px;
+                }
+            }
+
+
                         
                         
                         
                         
                         
 ================= Typography and Web Fonts ====================
+
+ Question 1: Difference between web-safe fonts and custom web fonts
+
+    Web-safe fonts are pre-installed on all devices (e.g., Arial, Times New Roman).
+
+    Custom web fonts (like Google Fonts) are downloaded from the web.
+
+    Use web-safe fonts when you want better performance and guaranteed compatibility.
+
+    Use custom fonts for better design and branding.
+
+
+Question 2: What is the font-family property in CSS? How do you apply a custom Google Font to a webpage?
+
+    font-family in CSS:
+        The font-family property defines which font should be used to display text.
+        You can specify multiple fonts as fallbacks.
+
+    Using a Google Font:
+        Go to https://fonts.google.com
+        Select a font (e.g., Poppins)
+
+==========================html 5==========================
+
+Question 1: Difference between HTML and HTML5
+    HTML (HyperText Markup Language):
+        Standard language used to create and structure content on the web.
+
+        Earlier versions like HTML 4.01 lacked support for rich media and semantic structure.
+
+        Required external plugins like Flash for video/audio.
+
+        No built-in support for modern web apps, mobile devices, or APIs.
+
+    HTML5:
+        The latest version of HTML.
+
+        Introduced to improve multimedia support, mobile compatibility, and clean code structure.
+
+        Includes new semantic tags, built-in audio/video support, and modern APIs.
+
+
+
+Question 2: What are the additional tags used in HTML5?
+
+        <header>
+        <footer>
+        <nav>
+        <section>
+        <article>
+        <aside>
+        <audio>
+        <video>
+        <source>
+        <track>
+        <canvas>
+        <svg>
+
+    new in inputs:
+        email
+        url
+        tel
+        number
+        range
+        date
+        time
+        color
+        search

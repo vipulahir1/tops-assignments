@@ -183,4 +183,98 @@ Question 2: How does the addEventListener() method work in JavaScript?
 
 example :   button.addEventListener("click", function() {
     alert("Button was clicked!");
-    }); -->
+    }); 
+
+    
+================Dom===================
+
+Question 1: What is the DOM (Document Object Model) in JavaScript? How does JavaScript interact with the DOM?
+
+    The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects, where each node is an object representing a part of the document (such as elements, attributes, or text).
+
+    The DOM allows JavaScript to access, manipulate, and modify the content, structure, and styles of a webpage dynamically.
+
+    For example, JavaScript can:
+
+    Change text content of elements
+
+    Add or remove HTML elements
+
+    Modify styles (CSS)
+
+    Handle user events like clicks or form submissions
+
+Questoin 2:  Explain the methods getElementById(), getElementsByClassName(), and querySelector() used to select elements from the DOM.
+        1: getElementById()
+    
+            Description: Selects a single element with the specified ID.
+            Returns: A single element object or null if not found.
+
+        2: getElementsByClassName()
+
+            Description: Selects all elements with the specified class name.
+            Returns: An HTMLCollection (array-like object) of matching elements.
+
+        3: querySelector()
+            
+            Description: Returns the first element that matches a specified CSS selector.
+            Returns: A single element object or null if not found.
+
+
+==============timing events===============
+
+
+ Question 1: Explain the setTimeout() and setInterval() functions in JavaScript. How are they used for timing events?
+
+        1. setTimeout()
+                The setTimeout() function executes a function once after a specified delay (in milliseconds).
+                It is used to delay a certain action.
+
+        2. setInterval()
+                The setInterval() function repeats the execution of a function continuously at a fixed time interval (in milliseconds).
+                It is used to perform repeating tasks, like timers, clocks, or animations.
+
+
+ Question 2: Provide an example of how to use setTimeout() to delay an action by 2 seconds.
+
+        setTimeout(() => {
+            console.log("Delayed by 2 seconds!");
+        }, 2000);
+
+
+
+====================error handaling====================
+
+ Question 1: What is error handling in JavaScript? Explain the try, catch, and finally blocks with an example.
+        What is Error Handling?
+            Error handling in JavaScript refers to the process of managing runtime errors — errors that occur while the code is running. Instead of crashing the entire application when an error occurs, JavaScript provides tools like try, catch, and finally to handle such errors gracefully.
+
+        try {
+            let a = 10;
+            let b = a + x; // x is not defined — causes ReferenceError
+            console.log(b);
+        } catch (error) {
+            console.log("An error occurred: " + error.message);
+        } finally {
+            console.log("This block always runs.");
+        }
+        
+        
+question 2: Why is error handling important in JavaScript applications?
+
+        Prevents Application Crash:
+            Without error handling, one runtime error can crash the entire script.
+
+        Improves User Experience:
+            Users see friendly error messages instead of broken interfaces or blank pages.
+
+        Debugging Support:
+            catch blocks can log meaningful error details that help developers identify and fix bugs.
+
+        Maintains Flow:
+            With proper handling, other parts of the application continue working even if one part fails.
+
+        Handles Unexpected Scenarios:
+                External data, user inputs, or network responses may not always be predictable. Error handling ensures those cases are covered.
+
+-->
