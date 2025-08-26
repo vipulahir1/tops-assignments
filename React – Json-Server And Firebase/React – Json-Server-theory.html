@@ -1,0 +1,70 @@
+<!--
+
+========================json-server and firebase real time database==============================
+
+
+Question 1: What do you mean by RESTful web services?
+
+    RESTful web services follow the REST (Representational State Transfer) architecture.
+
+    They use HTTP methods like GET, POST, PUT, DELETE for communication.
+
+    REST APIs exchange data mostly in JSON or XML format.
+
+    They are stateless, meaning each request is independent.
+
+    REST is widely used because it is lightweight, scalable, and easy to integrate.
+
+
+Question 2: What is Json-Server? How we use in React?
+
+    JSON-Server is a tool to create a fake REST API quickly for testing.
+
+    It reads data from a db.json file and serves it as an API.
+
+    In React, we use it to mock backend APIs during development.
+
+    Developers can run it with the command npx json-server --watch db.json.
+
+    It helps practice fetching, posting, and updating data without a real backend
+
+
+Question 3: How do you fetch data from a Json-server API in React? Explain fetch() or axios().
+
+    In React, we fetch data using fetch() or axios() inside useEffect().
+
+    fetch() is a built-in JavaScript method to make HTTP requests.
+
+    Axios is an external library that simplifies API calls and error handling.
+
+    Both return promises, which we handle using .then() or async/await.
+
+    They allow us to get, send, or update data from the JSON-Server API.
+
+
+Question 4: What is Firebase? What features does Firebase offer?
+
+    Firebase is a Backend-as-a-Service (BaaS) provided by Google.
+
+    It offers Realtime Database and Firestore for storing data.
+
+    Provides Authentication services like Email, Google, Facebook login.
+
+    Supports Cloud Storage, Hosting, and Push Notifications.
+
+    It is popular for building real-time, scalable web and mobile apps.
+
+    
+Question 5: Importance of handling errors and loading states when working with APIs in React.
+
+    APIs may take time, so we show a loading state (spinner/message).
+
+    Errors can occur due to network issues, so we display error messages.
+
+    This improves user experience and prevents blank screens.
+
+    Handling states makes the app more responsive and reliable.
+
+    Good error/loading handling ensures better debugging and trust in the app.
+    
+    -->
